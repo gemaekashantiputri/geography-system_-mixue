@@ -1,5 +1,5 @@
 <?php
-$title = "Daftar Penyedia Jasa Web";
+$title = "Daftar Lokasi Mixue di Purwokerto";
 include_once "header.php";
 include_once "koneksi.php"; ?>
 
@@ -18,6 +18,7 @@ include_once "koneksi.php"; ?>
               <th width="10%">Kategori</th>
               <th width="13%">Kota</th>
               <th width="20%">Website</th>
+              <th width="20%">Alamat</th>
               <th width="27%">Aksi</th>
             </tr>
           </thead>
@@ -35,10 +36,15 @@ include_once "koneksi.php"; ?>
                   <td><?php echo $item->kategori; ?></td>
                   <td><?php echo $item->kota; ?></td>
                   <td><?php echo $item->website; ?></td>
+                  <td><?php echo $item->alamat; ?></td>
                   <td class="ctr">
                     <div class="btn-group">
                       <a target="_blank" href="detail.php?id=<?php echo $item->id_mixue; ?>" rel="tooltip" data-original-title="Lihat File" data-placement="top" class="btn btn-primary">
                         <i class="fa fa-map-marker"> </i> Detail dan Lokasi</a>&nbsp;
+                    </div>
+                    <div class="btn-group">
+                      <a target="_blank" href="delete.php?id=<?php echo $item->id_mixue; ?>" rel="tooltip" data-original-title="Lihat File" data-placement="top" class="btn btn-danger">
+                        <i class="fa fa-delete-marker"> </i> Delete</a>&nbsp;
                     </div>
                   </td>
                 </tr>

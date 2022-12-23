@@ -15,7 +15,6 @@ $lat = "";
 $long = "";
 foreach ($obj->results as $item) {
   $name .= $item->name;
-  $ids .= $item->id_mixue;
   $kat .= $item->kategori;
   $web .= $item->website;
   $ig .= $item->instagram;
